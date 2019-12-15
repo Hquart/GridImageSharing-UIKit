@@ -15,7 +15,7 @@
 		62301AE823894D89005DC8EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62301AE623894D89005DC8EC /* LaunchScreen.storyboard */; };
 		62301AF0238A8D0A005DC8EC /* ThirstySoftRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62301AEF238A8D0A005DC8EC /* ThirstySoftRegular.otf */; };
 		62301AF2238A8D19005DC8EC /* Delm-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 62301AF1238A8D19005DC8EC /* Delm-Medium.otf */; };
-		6246B6BB23A2BBF8006A779C /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6246B6BA23A2BBF8006A779C /* File.swift */; };
+		6259427B23A3BF1800639F3F /* mainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6259427A23A3BF1800639F3F /* mainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		62301AE923894D89005DC8EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62301AEF238A8D0A005DC8EC /* ThirstySoftRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ThirstySoftRegular.otf; sourceTree = "<group>"; };
 		62301AF1238A8D19005DC8EC /* Delm-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Delm-Medium.otf"; sourceTree = "<group>"; };
-		6246B6BA23A2BBF8006A779C /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = instagrid/View/File.swift; sourceTree = SOURCE_ROOT; };
+		6259427A23A3BF1800639F3F /* mainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,6 @@
 		62301AF3238A95C4005DC8EC /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6246B6BA23A2BBF8006A779C /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				62301AE123894D84005DC8EC /* Main.storyboard */,
+				6259427A23A3BF1800639F3F /* mainView.swift */,
 				62301AF6238A9617005DC8EC /* Supporting Files */,
 			);
 			path = View;
@@ -182,8 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62301AE023894D84005DC8EC /* ViewController.swift in Sources */,
-				6246B6BB23A2BBF8006A779C /* File.swift in Sources */,
 				62301ADC23894D84005DC8EC /* AppDelegate.swift in Sources */,
+				6259427B23A3BF1800639F3F /* mainView.swift in Sources */,
 				62301ADE23894D84005DC8EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -314,7 +314,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -329,7 +329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2T8KN29479;
 				INFOPLIST_FILE = instagrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +339,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hquart.instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -346,7 +348,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2T8KN29479;
 				INFOPLIST_FILE = instagrid/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -354,7 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.hquart.instagrid;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

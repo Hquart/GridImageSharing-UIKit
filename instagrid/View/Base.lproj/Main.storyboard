@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,7 +69,7 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-zL-m6N">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-zL-m6N">
                                 <rect key="frame" x="149.66666666666666" y="49" width="114.66666666666666" height="37.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Lnp-b1-Dw5"/>
@@ -88,7 +88,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s8-lf-Jum" userLabel="MainView">
+                            <view multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s8-lf-Jum" userLabel="MainView">
                                 <rect key="frame" x="40" y="281" width="334" height="334"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-HD-kzh" userLabel="InsideStackView1">
@@ -136,6 +136,7 @@
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.023113563659999999" green="0.38826674220000001" blue="0.63129138949999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="ITh-HD-kzh" secondAttribute="trailing" constant="10" id="4ed-5c-QMP"/>
                                     <constraint firstItem="ITh-HD-kzh" firstAttribute="leading" secondItem="2s8-lf-Jum" secondAttribute="leading" constant="10" id="Rk3-VR-VPV"/>
@@ -149,6 +150,9 @@
                                         <include reference="Rk3-VR-VPV"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hjH-6C-75o" appends="YES" id="HCS-Jh-8lR"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmY-xO-lfk">
                                 <rect key="frame" x="15" y="239" width="384" height="27"/>
@@ -194,14 +198,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0M-ZG-SYN">
-                                <rect key="frame" x="184" y="130" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="share:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5P0-iL-3Zg"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.71362406020000002" green="0.84318619969999997" blue="0.89792937039999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -293,7 +289,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="mainView" destination="2s8-lf-Jum" id="X1M-eH-0kY"/>
+                        <outlet property="mainView" destination="2s8-lf-Jum" id="JHe-36-1cp"/>
                         <outletCollection property="photoButtons" destination="ulL-Ca-QXp" collectionClass="NSMutableArray" id="uqg-Hj-ESY"/>
                         <outletCollection property="photoButtons" destination="fXU-MM-hJS" collectionClass="NSMutableArray" id="aet-7L-WIF"/>
                         <outletCollection property="photoButtons" destination="xhB-r6-dik" collectionClass="NSMutableArray" id="Q9o-DE-akM"/>
@@ -304,8 +300,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="hjH-6C-75o"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="-182"/>
+            <point key="canvasLocation" x="-2883" y="-888"/>
         </scene>
     </scenes>
     <resources>

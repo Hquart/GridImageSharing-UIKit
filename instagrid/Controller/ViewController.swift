@@ -8,15 +8,7 @@
 
 import UIKit
 
-// This UIView extension will permit to convert our MainView to an image
-extension UIView {
-    func asImage() -> UIImage {
-        let renderer = UIGraphicsImageRenderer(bounds: bounds)
-        return renderer.image { rendererContext in
-            layer.render(in: rendererContext.cgContext)
-        }
-    }
-}
+
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -24,12 +16,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     var currentButton : UIButton?
     
     override func viewDidLoad() {
+        // par défaut layout de gauche selectionné
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         imagePicker.delegate = self
+        // Adding gesture recognizer to the Main View
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.up
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe(_:)))
+        swipeUp.direction = UISwipeGestureRecognizer.Direction.left
+        mainView.addGestureRecognizer(swipeUp)
+        mainView.addGestureRecognizer(swipeLeft)
     }
     
-    // This method will laucnh the imagePicker when a button is tapped
+
+    
+    
+    // This method will launch the imagePicker when a button is tapped
     @IBAction func loadImageButtonTapped(_ sender: UIButton) {
         self.currentButton = sender
         imagePicker.allowsEditing = true
@@ -46,16 +48,50 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //OUTLET of the Main View which will be shared
     @IBOutlet weak var mainView: UIView!
+  
+    func moveMainViewUp() {
+          
+       }
+    //CRéer 2 methodes une qui move up et l'autre back in
+    @objc func handleSwipe(_ gesture: UISwipeGestureRecognizer) {
+        if UIDevice.current.orientation.isPortrait && gesture.direction == UISwipeGestureRecognizer.Direction.up {
+            mainView.transform = CGAffineTransform(translationX: 0, y: UIScreen.main.bounds.height)
+            shareLayout()
+        } else if UIDevice.current.orientation.isLandscape && gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            mainView.transform = CGAffineTransform(translationX: UIScreen.main.bounds.width, y: 0)
+            shareLayout()
+    }
+    }
     
+   func shareLayout() {
+        let content = mainView.asImage()
+        let vc = UIActivityViewController(activityItems: [content], applicationActivities: nil)
+        present(vc, animated: true, completion: nil)
+    }
     
+  
+    
+//    private func transformMainView(gesture: UISwipeGestureRecognizer) {
+//        let translation = gesture.translation(in: mainView)
+//        mainView.transform = CGAffineTransform(translationX: translation.x, y: translation.y)
+//    }
     
     // I create a function which removes pictures from buttons to have a clean layout when I switch
     func cleanLayout() {
-        photoButtons[0].setImage(nil, for: UIControl.State.normal)
-        photoButtons[1].setImage(nil, for: UIControl.State.normal)
-        photoButtons[2].setImage(nil, for: UIControl.State.normal)
-        photoButtons[3].setImage(nil, for: UIControl.State.normal)
+        for button in photoButtons {
+            button.setImage(nil, for: UIControl.State.normal)
+        }
     }
+        
+    //creer une methode generique pour tous les layout avec parametre boutton avec un switch
+    
+    
+    
+    
+    
+    
+    
+    
     
     @IBAction func leftLayout(_ sender: Any) {
         cleanLayout()
@@ -104,18 +140,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
              dismiss(animated: true, completion: nil)
     }
-    @IBAction func share(_ sender: Any) {
-        let content = mainView.asImage()
-            let vc = UIActivityViewController(activityItems: [content], applicationActivities: [])
-            present(vc, animated: true)
-        }
+    
+    
+    
+    
+    
+    
+
     }
 
 
+// This UIView extension will permit to convert our MainView to an image
+extension UIView {
+    func asImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: bounds)
+        return renderer.image { rendererContext in
+            layer.render(in: rendererContext.cgContext)
+        }
+    }
+}
     
 
     
-
     
     
     
@@ -123,7 +169,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     
     
-    
-
 
 

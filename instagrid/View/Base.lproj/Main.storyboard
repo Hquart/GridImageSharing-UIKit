@@ -70,7 +70,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-zL-m6N">
-                                <rect key="frame" x="150.66666666666666" y="49" width="112.99999999999997" height="34"/>
+                                <rect key="frame" x="149.66666666666666" y="49" width="114.66666666666666" height="37.666666666666657"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Lnp-b1-Dw5"/>
                                 </constraints>
@@ -163,7 +163,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Dd9-EB-gC3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
@@ -218,7 +218,7 @@
                             <constraint firstItem="2s8-lf-Jum" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="SR6-cY-FS1"/>
                             <constraint firstItem="RW8-PA-XVp" firstAttribute="top" secondItem="2s8-lf-Jum" secondAttribute="top" id="Uwm-kR-e6w"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lA4-rl-xNt" secondAttribute="trailing" id="XZB-cx-84a"/>
-                            <constraint firstItem="lA4-rl-xNt" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rBw-zL-m6N" secondAttribute="bottom" constant="10" id="hly-wq-7GT"/>
+                            <constraint firstItem="pmY-xO-lfk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fG0-df-rnJ"/>
                             <constraint firstItem="RW8-PA-XVp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mUM-UN-ZiB"/>
                             <constraint firstItem="pmY-xO-lfk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="rwm-RJ-RSU"/>
                             <constraint firstItem="RW8-PA-XVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wBd-qO-HXM"/>
@@ -229,6 +229,7 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="EPl-Q0-MfU"/>
+                                <exclude reference="fG0-df-rnJ"/>
                                 <exclude reference="A3f-Kz-FxF"/>
                                 <exclude reference="HmG-y1-TKA"/>
                                 <exclude reference="4bC-Uw-7nH"/>
@@ -243,12 +244,13 @@
                                 <exclude reference="EPl-Q0-MfU"/>
                                 <exclude reference="FbD-Qf-BNo"/>
                                 <exclude reference="XZB-cx-84a"/>
+                                <include reference="fG0-df-rnJ"/>
                                 <exclude reference="OdG-la-Ndf"/>
                                 <exclude reference="PWV-0d-ZGT"/>
-                                <exclude reference="hly-wq-7GT"/>
                                 <exclude reference="zzf-7q-iQs"/>
                                 <include reference="A3f-Kz-FxF"/>
                                 <exclude reference="HmG-y1-TKA"/>
+                                <exclude reference="Iuc-LU-pOJ"/>
                                 <exclude reference="y0H-Q9-srG"/>
                                 <exclude reference="4bC-Uw-7nH"/>
                                 <include reference="CdA-K2-hNp"/>
@@ -283,7 +285,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-5067" y="-1074"/>
+            <point key="canvasLocation" x="-5994" y="-1294"/>
         </scene>
     </scenes>
     <resources>

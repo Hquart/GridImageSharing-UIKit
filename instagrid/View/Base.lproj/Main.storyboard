@@ -244,10 +244,10 @@
                                 <exclude reference="EPl-Q0-MfU"/>
                                 <exclude reference="FbD-Qf-BNo"/>
                                 <exclude reference="XZB-cx-84a"/>
-                                <include reference="fG0-df-rnJ"/>
                                 <exclude reference="OdG-la-Ndf"/>
                                 <exclude reference="PWV-0d-ZGT"/>
                                 <exclude reference="zzf-7q-iQs"/>
+                                <include reference="fG0-df-rnJ"/>
                                 <include reference="A3f-Kz-FxF"/>
                                 <exclude reference="HmG-y1-TKA"/>
                                 <exclude reference="Iuc-LU-pOJ"/>
@@ -285,7 +285,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-5994" y="-1294"/>
+            <point key="canvasLocation" x="-6351" y="-1000"/>
         </scene>
     </scenes>
     <resources>

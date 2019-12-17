@@ -19,8 +19,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         //Left layout is selected by default when the app is launched
         changeLayout(layoutButtons[0])
     }
-    
-    
     @IBAction func handleSwipe(_ sender: UISwipeGestureRecognizer?) {
         if let gesture = sender {
             if UIDevice.current.orientation.isPortrait && gesture.direction == .up {

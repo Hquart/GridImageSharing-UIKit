@@ -18,7 +18,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         //Left layout is selected by default when the app is launched
         changeLayout(layoutButtons[0])
+        //I create
+        NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
+    
+    @objc func orientationChanged() {
+        if UIDevice.current.orientation.isLandscape {
+                    swipeLabel.text = "Swipe Left to share"
+                } else {
+                    swipeLabel.text = "Swipe Up to share"
+                }
+            }
+    
     @IBAction func handleSwipe(_ sender: UISwipeGestureRecognizer?) {
         if let gesture = sender {
             if UIDevice.current.orientation.isPortrait && gesture.direction == .up {
@@ -44,15 +55,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var mainView: UIView!
     // I create an Outlet of the Swipe Text Label to init the swipe gesture from it
     @IBOutlet weak var swipeLabel: UILabel!
-    
-
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-         if UIDevice.current.orientation.isLandscape {
-             swipeLabel.text = "Swipe Left to share"
-         } else {
-             swipeLabel.text = "Swipe Up to share"
-         }
-     }
     
     //This Method will make all photo buttons visible:
     func showButtons() {

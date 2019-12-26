@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="landscape" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -17,14 +17,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="instagrid" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RW8-PA-XVp" userLabel="ChoiceStackView">
-                                <rect key="frame" x="491.5" y="60" width="56.5" height="200"/>
+                                <rect key="frame" x="72" y="752" width="270" height="80"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XAB-9C-aDn" userLabel="MiddleLayout">
-                                        <rect key="frame" x="0.0" y="0.0" width="56.5" height="56.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XAB-9C-aDn" secondAttribute="height" multiplier="1:1" id="T7S-fF-vLR"/>
                                         </constraints>
@@ -35,7 +35,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3WR-Yv-ByC" userLabel="LeftLayout">
-                                        <rect key="frame" x="0.0" y="71.5" width="56.5" height="57"/>
+                                        <rect key="frame" x="95" y="0.0" width="80" height="80"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="3WR-Yv-ByC" secondAttribute="height" multiplier="1:1" id="9v4-1G-jlV"/>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0h-D5-1zo" userLabel="RightLayout">
-                                        <rect key="frame" x="0.0" y="143.5" width="56.5" height="56.5"/>
+                                        <rect key="frame" x="190" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="b0h-D5-1zo" secondAttribute="height" multiplier="1:1" id="Hfh-lg-lLW"/>
                                         </constraints>
@@ -70,7 +70,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagrid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBw-zL-m6N">
-                                <rect key="frame" x="227.5" y="5" width="113" height="40"/>
+                                <rect key="frame" x="150.66666666666666" y="49" width="112.99999999999997" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Lnp-b1-Dw5"/>
                                 </constraints>
@@ -89,16 +89,16 @@
                                 </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s8-lf-Jum" userLabel="MainView">
-                                <rect key="frame" x="184" y="60" width="200" height="200"/>
+                                <rect key="frame" x="40" y="281" width="334" height="334"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ITh-HD-kzh" userLabel="HStack">
-                                        <rect key="frame" x="10" y="10" width="180" height="180"/>
+                                        <rect key="frame" x="10" y="10" width="314" height="314"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gre-iu-TFO" userLabel="VStack1">
-                                                <rect key="frame" x="0.0" y="0.0" width="180" height="85"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="314" height="152"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulL-Ca-QXp" userLabel="ButtonOne">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
                                                         <connections>
@@ -106,7 +106,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXU-MM-hJS" userLabel="ButtonTwo">
-                                                        <rect key="frame" x="95" y="0.0" width="85" height="85"/>
+                                                        <rect key="frame" x="162" y="0.0" width="152" height="152"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
                                                         <connections>
@@ -117,10 +117,10 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qAv-cE-I0f" userLabel="VStack2">
-                                                <rect key="frame" x="0.0" y="95" width="180" height="85"/>
+                                                <rect key="frame" x="0.0" y="162" width="314" height="152"/>
                                                 <subviews>
                                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xhB-r6-dik" userLabel="Button Three">
-                                                        <rect key="frame" x="0.0" y="0.0" width="85" height="85"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
                                                         <connections>
@@ -128,7 +128,7 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttf-s0-xDv" userLabel="Button Four">
-                                                        <rect key="frame" x="95" y="0.0" width="85" height="85"/>
+                                                        <rect key="frame" x="162" y="0.0" width="152" height="152"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" image="Cross"/>
                                                         <connections>
@@ -158,12 +158,12 @@
                                 </variation>
                             </view>
                             <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Up to share" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmY-xO-lfk">
-                                <rect key="frame" x="15" y="146.5" width="148.5" height="27"/>
+                                <rect key="frame" x="15" y="239" width="384" height="27"/>
                                 <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Dd9-EB-gC3"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ThirstySoftRegular" family="Thirsty Soft" pointSize="18"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <connections>
@@ -172,7 +172,7 @@
                                 </connections>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Arrow Up" translatesAutoresizingMaskIntoConstraints="NO" id="lA4-rl-xNt">
-                                <rect key="frame" x="82" y="126.5" width="15" height="15"/>
+                                <rect key="frame" x="0.0" y="219" width="414" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="Cpx-Q7-ghv"/>
                                     <constraint firstAttribute="width" constant="50" id="eER-mY-M5z">
@@ -285,16 +285,16 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-8579" y="-455"/>
+            <point key="canvasLocation" x="-9287" y="-526"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Arrow Left" width="3.5" height="4.5"/>
-        <image name="Arrow Up" width="4.5" height="3.5"/>
+        <image name="Arrow Left" width="3.3333332538604736" height="4.6666665077209473"/>
+        <image name="Arrow Up" width="4.6666665077209473" height="3.3333332538604736"/>
         <image name="Cross" width="48" height="49"/>
-        <image name="Layout 1" width="27" height="27"/>
-        <image name="Layout 2" width="27" height="27"/>
-        <image name="Layout 3" width="27" height="27"/>
+        <image name="Layout 1" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 2" width="26.666666030883789" height="26.666666030883789"/>
+        <image name="Layout 3" width="26.666666030883789" height="26.666666030883789"/>
         <image name="select1" width="80" height="80"/>
         <image name="select2" width="80" height="80"/>
         <image name="select3" width="80" height="80"/>

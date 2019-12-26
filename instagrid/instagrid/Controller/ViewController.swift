@@ -18,7 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imagePicker.delegate = self
         //Left layout is selected by default when the app is launched
         changeLayout(layoutButtons[0])
-        //I create
+        //I create a notification for orientation mode so I can set the label to swipe Left in Landscape
         NotificationCenter.default.addObserver(self, selector: #selector(orientationChanged), name: UIDevice.orientationDidChangeNotification, object: nil)
     }
     
